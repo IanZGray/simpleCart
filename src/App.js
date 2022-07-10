@@ -8,7 +8,8 @@ function App() {
   return (
 
     <div className="backWin">
-      <List data={products}></List> <Cart data={products}></Cart>
+      <List data={products}></List> 
+      <Cart data={products}></Cart>
     </div>
 
   );
