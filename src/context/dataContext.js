@@ -6,10 +6,11 @@ const DataContext = createContext({});
 export const DataProvider = ({ children }) => {
     const [data, setData] = useState(products);
     const [cartData, setCartData] = useState([]);
+    const [cartQuantity, setCartQuantity] = useState([]);
 
     return (
         <>
-        <DataContext.Provider value={{ data, setData, cartData, setCartData }}>
+        <DataContext.Provider value={{ data, setData, cartData, setCartData, cartQuantity, setCartQuantity }}>
             {children}
         </DataContext.Provider>
         </>

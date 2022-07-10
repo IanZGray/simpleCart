@@ -37,15 +37,20 @@ const List = () => {
 
 
             return (
-                <div key={index}>
-                    <h5><img 
-                    src={uhit} 
-                    width={70} 
-                    className="imageCircle" 
-                    alt="productImage"
-                    ></img> 
-                    {prod.name} ${prod.cost} Stock:{prod.instock}<button onClick={() => addToCart(prod)} >Add To Cart</button></h5>
-                        <p className="itemDetails">
+                <div key={index} className="itemDetails">
+                    <h5>
+                        <img 
+                        src={uhit} 
+                        width={70} 
+                        className="imageCircle" 
+                        alt="productImage"
+                        ></img> 
+                        {prod.name} ${prod.cost} Stock:{prod.instock}<button 
+                        onClick={() => addToCart(prod)} >
+                            Add To Cart
+                        </button>
+                    </h5>
+                        <p>
                             Country: {prod.country} 
                         </p> 
                 </div>
@@ -54,7 +59,7 @@ const List = () => {
         })
 
         return (
-            <div className="listStyle">
+            <div className="listStyle block col-3">
             <h1>Items</h1>
                 <ul>
                     {itemList}
